@@ -1,5 +1,17 @@
 # contactdata (development version)
 
+## Breaking changes
+
+* The `contact_matrix()` function now returns a `contact_matrix` object (#13),
+  which results in a number of breaking changes:
+  - The object class is now `c("contact_matrix", "matrix", "array")`
+  - The age groups are now formatted as `[low,high)`, when they previously were
+    formatted as `low_high`
+
+* The age dataset in `age_df_countries()` no longer regroup the `[75,80)`,
+  `[80,85)`, `[85,90)`, `[90,95)` and `[95,100)` age groups into a single `75+`
+  age group (#13).
+
 # contactdata 1.1.0
 
 ## Bug fix
