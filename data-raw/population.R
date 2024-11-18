@@ -4,7 +4,7 @@ fix_names <- function(name) {
 
   # Convert to common names in English
   name <- stringi::stri_trans_general(name, "Latin-ASCII")
-  new_name <- countrycode::countryname(name)
+  new_name <- countrycode::countryname(name, destination = "cldr.name.en")
 
   return(new_name)
 }

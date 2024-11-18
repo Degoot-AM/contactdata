@@ -32,7 +32,7 @@ for (i in seq_along(fichiers)) {
 
   })
 
-  names(res) <- countrycode::countrycode(names(res), origin = "iso3c", destination = "country.name.en")
+  names(res) <- countrycode::countrycode(names(res), origin = "iso3c", destination = "cldr.name.en")
 
   saveRDS(res, paste0("inst/extdata/", new_names_all[[i]]))
 
